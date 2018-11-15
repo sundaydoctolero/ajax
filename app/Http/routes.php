@@ -21,3 +21,7 @@ Route::post('posts/changeStatus', array('as' => 'changeStatus', 'uses' => 'Posts
 
 
 Route::resource('links','LinkController');
+
+Route::get('ajax-image-upload', 'ImageController@index');
+Route::post('ajax-image-upload', 'ImageController@ajaxImage');
+Route::delete('ajax-remove-image/{filename}', 'ImageController@deleteImage');
